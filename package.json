@@ -13,12 +13,16 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.6",
     "body-parser": "^2.2.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-on-fix": "^1.1.0",
     "express": "^5.1.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "cypress": "^15.4.0",
     "jest": "^30.2.0",
     "supertest": "^7.1.4"
   }
