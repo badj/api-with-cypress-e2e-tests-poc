@@ -76,8 +76,8 @@ jobs:
           # Start the API in the background
       - name: Start API
         run: |
-             node server.js &
-            wait-on http://localhost:3333
+          node server.js & \
+          wait-on http://localhost:3333
 
 #      - name: Start and run unit test for API and Run Cypress tests in Docker
       - name: Run Cypress tests in Docker
