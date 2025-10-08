@@ -5,7 +5,7 @@
 This project is a boilerplate Node.js API server built with **Express** supporting **CRUD operations** for a simple `Item` entity. It features:
 
 - **Swagger UI documentation** for easy API reference and exploration
-- **Jest and supertes unit tests** to verify all API endpoints accurately
+- **Jest and supertest unit tests** to verify all API endpoints accurately
 - **TODO:** 
   - **End-to-End tests** using Cypress that verify both the availability of Swagger docs and the functionality of every CRUD endpoint
 
