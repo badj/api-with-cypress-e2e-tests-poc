@@ -201,13 +201,13 @@ Ran all test suites.
 
 ```
 ├── tests/
-    └── app.test.js  # Unit tests for API
-├── app.js           # Express app and API logic
+    └── app.test.js         # Unit tests for API
+├── app.js                  # Express app and API logic
 └── cypress/
     └── e2e/
         └── api_crud.cy.js  # E2E tests for API and Swagger
 ├── package.json
-├── server.js        # Express app server start logic
+├── server.js               # Express app server start logic
 ```
 
 ***
