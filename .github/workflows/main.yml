@@ -44,16 +44,16 @@ jobs:
       - name: Start API in background
         run: node server.js
 
-      - name: Wait for API service to be healthy
-        run: |
-          for i in {1..20}; do
-            if nc -z localhost 3333; then
-              echo "Item API is up!";
-              break;
-            fi;
-            echo "Waiting for the API to be ready...";
-            sleep 3;
-          done
+#      - name: Wait for API service to be healthy
+#        run: |
+#          for i in {1..20}; do
+#            if nc -z localhost 3333; then
+#              echo "Item API is up!";
+#              break;
+#            fi;
+#            echo "Waiting for the API to be ready...";
+#            sleep 3;
+#          done
 
       - name: Install Cypress
         run: npm install --save-dev cypress
