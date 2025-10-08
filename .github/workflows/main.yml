@@ -12,129 +12,43 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-#    services:
-#      api:
-#        image: node:18
-#        ports:
-#          - 3333:3333
-#        env:
-#          CI: true
-#        options: >-
-#          --health-cmd="curl --fail http://localhost:3333/api-docs || exit 1"
-#          --health-interval=10s
-#          --health-timeout=5s
-#          --health-retries=15
-#        volumes:
-#          - .:/app
-#        command: sh -c "cd /app && npm ci && node server.js"
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Update to latest version
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-         node-version: '22' # Use Node.js 22 to satisfy dependency requirements
+          node-version: '22'
 
       - name: Cache Cypress binary
         uses: actions/cache@v4
         with:
           path: ~/.cache/Cypress
-          key: cypress-${{ runner.os }}-14.5.4
+          key: cypress-${{ runner.os }}-13.15.0
           restore-keys: |
-            cypress-${{ runner.os }}-         
-
-#      - name: Cache Cypress binary
-#        uses: actions/cache@v4
-#        with:
-#          path: ~/.cache/Cypress
-#          key: cypress-${{ runner.os }}-15.4.0
-#          restore-keys: |
-#            cypress-${{ runner.os }}-
-
-#      - name: Install dependencies
-#        run: npm ci
+            cypress-${{ runner.os }}-
 
       - name: Install app dependencies
         run: npm install
 
-#      - name: Run unit tests
-#        run: npm test
-
-#      - name: Start API in background
-#        run: node server.js
-
-#      - name: Wait for API service to be healthy
-#        run: |
-#          for i in {1..20}; do
-#            if nc -z localhost 3333; then
-#              echo "Item API is up!";
-#              break;
-#            fi;
-#            echo "Waiting for the API to be ready...";
-#            sleep 3;
-#          done
-
-#      - name: Install Cypress
-#        run: npm install --save-dev cypress
-
-      # Install wait-on globally (to wait for the API to be ready)
       - name: Install wait-on
         run: npm install -g wait-on
 
-#      - name: Run Cypress tests in Docker
-#        env:
-#          CYPRESS_baseUrl: http://localhost:3333
-#        run: npx cypress run
-
-#      - name: Run Cypress tests in Docker
-#        run: |
-#          docker run --rm \
-#           -v ${{ github.workspace }}:/e2e \
-#           -w /e2e \
-#           -e CYPRESS_baseUrl=http://localhost:3333 \
-#           --entrypoint /bin/sh \
-#           cypress/included:13.3.2 \
-#           -c "npm install && npx cypress run"
-
-
-      # Start the API in the background
-#      - name: Start API in  background
-#        run: |
-#          node server.js && wait-on http://localhost:3333
-#          node server.js & \
-#          wait-on http://localhost:3333
-
-#      # Install wait-on
-#      - name: Install wait-on
-#        run: npm install -g wait-on
-
-      # Start API
       - name: Start API
         run: |
           nohup node server.js &
-          npx wait-on http://localhost:3333/api-docs --timeout 30000      
+          npx wait-on http://localhost:3333/api-docs --timeout 30000
 
-#      - name: Start and run unit test for API and Run Cypress tests in Docker
       - name: Run Cypress tests in Docker
         run: |
           docker run --rm \
-           -v ${{ github.workspace }}:/e2e \
-           -w /e2e \
-           -e CYPRESS_baseUrl=http://localhost:3333 \
-           --entrypoint /bin/sh \
-           cypress/included:14.5.4 \ 
-           -c "npm install --save-dev cypress && npx cypress run"
-#           cypress/included:13.3.2 \
-#           -c "npm install && npx cypress run"
-#           -c "npx cypress run"
-#           -c "node server.js && npm install && npx cypress run"
-
-#      - name: Run Cypress tests
-#        run: |
-#              docker run --network host -v $(pwd):/e2e -w /e2e cypress/included:13.15.0 npx cypress run
-
+            -v ${{ github.workspace }}:/e2e \
+            -w /e2e \
+            -e CYPRESS_baseUrl=http://localhost:3333 \
+            --network host \
+            cypress/included:13.15.0 \
+            npx cypress run
 
       - name: Upload Cypress test results
         if: always()
