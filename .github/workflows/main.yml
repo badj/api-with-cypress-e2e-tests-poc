@@ -55,8 +55,8 @@ jobs:
 #            sleep 3;
 #          done
 
-      - name: Install Cypress
-        run: npm install --save-dev cypress
+#      - name: Install Cypress
+#        run: npm install --save-dev cypress
 
       # Install wait-on globally (to wait for the API to be ready)
       - name: Install wait-on
@@ -104,7 +104,9 @@ jobs:
            -e CYPRESS_baseUrl=http://localhost:3333 \
            --entrypoint /bin/sh \
            cypress/included:13.3.2 \
-           -c "npx cypress run"
+           -c "npm install --save-dev cypress && npx cypress run"
+#           -c "npm install && npx cypress run"
+#           -c "npx cypress run"
 #           -c "node server.js && npm install && npx cypress run"
 
       - name: Upload Cypress test results
