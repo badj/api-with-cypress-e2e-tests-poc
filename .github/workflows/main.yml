@@ -32,6 +32,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+         node-version: '22' # Use Node.js 22 to satisfy dependency requirements
+
+      - name: Cache Cypress binary
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-15.4.0
+          restore-keys: |
+            cypress-${{ runner.os }}-         
+
+#      - name: Cache Cypress binary
+#        uses: actions/cache@v4
+#        with:
+#          path: ~/.cache/Cypress
+#          key: cypress-${{ runner.os }}-15.4.0
+#          restore-keys: |
+#            cypress-${{ runner.os }}-
+
 #      - name: Install dependencies
 #        run: npm ci
 
@@ -103,11 +124,17 @@ jobs:
            -w /e2e \
            -e CYPRESS_baseUrl=http://localhost:3333 \
            --entrypoint /bin/sh \
-           cypress/included:13.3.2 \
+           cypress/included:13.15.0 \ 
            -c "npm install --save-dev cypress && npx cypress run"
+#           cypress/included:13.3.2 \
 #           -c "npm install && npx cypress run"
 #           -c "npx cypress run"
 #           -c "node server.js && npm install && npx cypress run"
+
+      - name: Run Cypress tests
+        run: |
+              docker run --network host -v $(pwd):/e2e -w /e2e cypress/included:13.15.0 npx cypress run      
+            
 
       - name: Upload Cypress test results
         if: always()
