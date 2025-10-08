@@ -73,7 +73,14 @@ jobs:
 #           cypress/included:13.3.2 \
 #           -c "npm install && npx cypress run"
 
-      - name: Start and run unit test for API and Run Cypress tests in Docker
+          # Start the API in the background
+      - name: Start API
+        run: |
+             node server.js &
+            wait-on http://localhost:3333
+
+#      - name: Start and run unit test for API and Run Cypress tests in Docker
+      - name: Run Cypress tests in Docker
         run: |
           docker run --rm \
            -v ${{ github.workspace }}:/e2e \
@@ -81,7 +88,8 @@ jobs:
            -e CYPRESS_baseUrl=http://localhost:3333 \
            --entrypoint /bin/sh \
            cypress/included:13.3.2 \
-           -c "node server.js && npm install && npx cypress run"        
+           -c "npx cypress run"
+#           -c "node server.js && npm install && npx cypress run"
 
       - name: Upload Cypress test results
         if: always()
