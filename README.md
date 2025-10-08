@@ -175,10 +175,11 @@ Ran all test suites.
 ## Folder Structure
 
 ```
+├── __tests__/
+    └── app.test.js  # Unit tests for API
 ├── app.js           # Express app and API logic
 ├── package.json
-└── __tests__/
-    └── app.test.js  # Unit tests for API
+├── server.js        # Express app server start logic
 ```
 
 ***
@@ -186,9 +187,8 @@ Ran all test suites.
 ## TODO
 
 1. Create a TOC
-2. Create Unit tests for all API endpoints / operations as part of the app startup 
-3. Create Cypress tests for all CRUD operations
-4. Create Github actions with workflows to deploy the app and test the app in Docker with Cypress 
+2. Create Cypress tests for all CRUD operations
+3. Create Github actions with workflows to deploy the app and test the app in Docker with Cypress 
 
 ***
 
