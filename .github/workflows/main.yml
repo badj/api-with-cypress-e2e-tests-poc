@@ -81,7 +81,6 @@ jobs:
            -e CYPRESS_baseUrl=http://localhost:3333 \
            --entrypoint /bin/sh \
            cypress/included:13.3.2 \
-#           -c "npm test && node server.js && npm install && npx cypress run"        
            -c "node server.js && npm install && npx cypress run"        
 
       - name: Upload Cypress test results
