@@ -93,7 +93,7 @@ jobs:
       - name: Start API
         run: |
           nohup node server.js &
-          npx wait-on http://localhost:3333 --timeout 30000      
+          npx wait-on http://localhost:3333/api-docs --timeout 30000      
 
 #      - name: Start and run unit test for API and Run Cypress tests in Docker
       - name: Run Cypress tests in Docker
