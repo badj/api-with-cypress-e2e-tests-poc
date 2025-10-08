@@ -169,9 +169,6 @@ Ran all test suites.
 ```
 ***
 
-
-***
-
 ## Folder Structure
 
 ```
