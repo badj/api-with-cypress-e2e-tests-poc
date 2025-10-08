@@ -10,6 +10,8 @@ This project is a boilerplate Node.js API server built with **Express** supporti
 
 Ideal for learning, prototyping, or as a base for new RESTful services.
 
+[![Item API Deploy and E2E Cypress Tests](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml/badge.svg)](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml)
+
 ***
 
 ## Features
@@ -198,6 +200,8 @@ Ran all test suites.
 ***
 
 ## CI/CD with GitHub Actions
+
+[![Item API Deploy and E2E Cypress Tests](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml/badge.svg)](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml)
 
 > - CI is scheduled to run daily and will run on every push/PR
 > - API is deployed in Docker and health-checked ➝ Unit tests (Jest) ensure API correctness on API server start ➝ E2E Cypress tests validate API and Swagger live :)

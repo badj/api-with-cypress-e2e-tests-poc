@@ -35,6 +35,11 @@ jobs:
       - name: Install wait-on
         run: npm install -g wait-on
 
+      - name: Run unit tests
+        run: |
+          nohup npm test &
+          npx wait-on http://localhost:3333/api-docs --timeout 5000
+
       - name: Start API
         run: |
           nohup node server.js &
