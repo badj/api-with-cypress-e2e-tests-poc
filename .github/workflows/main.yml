@@ -81,8 +81,7 @@ jobs:
       # Start the API in the background
       - name: Start API in  background
         run: |
-          node server.js & 
-          wait-on http://localhost:3333
+          -c "node server.js && wait-on http://localhost:3333"
 #          node server.js & \
 #          wait-on http://localhost:3333
 
