@@ -34,11 +34,11 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
 ### Installation
 
 - Clone the repo:
-  ```
+  ```terminaloutput
   git clone <this-repo>
   ```
 - Change to the project folder:
-  ```
+  ```terminaloutput
   cd <project-folder>
   ```
 - Install dependencies:
@@ -97,7 +97,7 @@ Unit tests are implemented in Jest and supertest inside the `tests/` directory t
   
 - Expected output sample:
 
-```terminaloutput
+```json
 (main) % npm test                     
 
 > nodejs-express-api-with-swagger-and-cypress-e2e-tests@1.0.0 test
@@ -138,7 +138,7 @@ Ran all test suites.
 
 - Expected output sample:
 
-```terminaloutput
+```json
 (main) % RUN_TESTS=true node server.js
 Server running on http://localhost:3333
 Swagger docs available at http://localhost:3333/api-docs
@@ -197,9 +197,21 @@ Ran all test suites.
   
 ***
 
+## CI/CD with GitHub Actions
+
+> - CI is scheduled to run daily and will run on every push/PR
+> - API is deployed in Docker and health-checked ➝ Unit tests (Jest) ensure API correctness on API server start ➝ E2E Cypress tests validate API and Swagger live :)
+> - HTML reports are generated for each Cypress test run and uploaded as workflow artefacts.
+> - See [.github/workflows/main.yml](.github/workflows/main.yml).
+
+***
+
 ## Folder Structure
 
-```
+```json
+├── .github/
+    └── workflows/
+        └── main.yml        # Wortkflow for GitHub Actions
 ├── tests/
     └── app.test.js         # Unit tests for API
 ├── app.js                  # Express app and API logic
