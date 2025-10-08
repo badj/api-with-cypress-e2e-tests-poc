@@ -79,11 +79,21 @@ jobs:
 
 
       # Start the API in the background
-      - name: Start API in  background
-        run: |
-          node server.js && wait-on http://localhost:3333
+#      - name: Start API in  background
+#        run: |
+#          node server.js && wait-on http://localhost:3333
 #          node server.js & \
 #          wait-on http://localhost:3333
+
+#      # Install wait-on
+#      - name: Install wait-on
+#        run: npm install -g wait-on
+
+      # Start API
+      - name: Start API
+        run: |
+          nohup node server.js &
+          npx wait-on http://localhost:3333 --timeout 30000      
 
 #      - name: Start and run unit test for API and Run Cypress tests in Docker
       - name: Run Cypress tests in Docker
@@ -106,3 +116,7 @@ jobs:
             cypress/reports/result.html
             cypress/videos
             cypress/screenshots
+
+      - name: Cleanup
+        if: always()
+        run: pkill node || true
