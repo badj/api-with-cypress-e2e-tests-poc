@@ -124,7 +124,7 @@ jobs:
            -w /e2e \
            -e CYPRESS_baseUrl=http://localhost:3333 \
            --entrypoint /bin/sh \
-           cypress/included:13.15.0 \ 
+           cypress/included:15.4.0 \ 
            -c "npm install --save-dev cypress && npx cypress run"
 #           cypress/included:13.3.2 \
 #           -c "npm install && npx cypress run"
