@@ -14,6 +14,25 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
 
 ***
 
+### Table of contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+- [Running the Application](#running-the-application)
+  - [Start the Server](#start-the-server)
+- [API Endpoints](#api-endpoints)
+- [Swagger API Documentation](#swagger-api-documentation)
+- [Unit Tests](#unit-tests)
+- [End-to-End Testing](#end-to-end-testing)
+- [CI/CD with GitHub Actions](#cicd-with-github-actions)
+- [Folder Structure](#folder-structure)
+- [Customization](#customization)
+- [TODO](#todo)
+- [License](#license)
+***
+
 ## Features
 
 - **Express API** with full CRUD for items
@@ -23,6 +42,8 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
   - Validate availability and accuracy of Swagger docs
   - Automated checks for all CRUD endpoint operations
 
+[_⇡ Return to the Table of Contents_](#table-of-contents)
+
 ***
 
 ## Getting Started
@@ -31,7 +52,6 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
 
 - Node.js (v14+ recommended)
 - npm
-
 
 ### Installation
 
@@ -48,6 +68,8 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
   npm install
   ```
 
+[_⇡ Return to the Table of Contents_](#table-of-contents)
+
 ***
 
 ## Running the Application
@@ -60,6 +82,8 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
 
 - API accessible at: [http://localhost:3333](http://localhost:3333)
 - Swagger API docs accessible at: [http://localhost:3333/api-docs](http://localhost:3333/api-docs)
+
+[_⇡ Return to the Table of Contents_](#table-of-contents)
 
 ***
 
@@ -75,12 +99,16 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
 
 - See complete request/response schemas at [/api-docs](http://localhost:3333/api-docs).
 
+[_⇡ Return to the Table of Contents_](#table-of-contents)
+
 ***
 
-## API Documentation
+## Swagger API Documentation
 
 - **Swagger UI** auto-generates API docs based on code comments and Swagger OpenAPI definitions.
 - Interactive API explorer found at [/api-docs](http://localhost:3333/api-docs).
+
+[_⇡ Return to the Table of Contents_](#table-of-contents)
 
 ***
 
@@ -176,9 +204,12 @@ Snapshots:   0 total
 Time:        0.265 s, estimated 1 s
 Ran all test suites.
 ```
+
+[_⇡ Return to the Table of Contents_](#table-of-contents)
+
 ***
 
-## Testing
+## End-to-End Testing
 
 > **Cypress End-to-End Tests**
 > - The tests visits the [Swagger API docs](http://localhost:3333/api-docs) to verify the availability and correctness
@@ -197,6 +228,8 @@ Ran all test suites.
   npx cypress run
   ```
   
+[_⇡ Return to the Table of Contents_](#table-of-contents)
+
 ***
 
 ## CI/CD with GitHub Actions
@@ -207,6 +240,8 @@ Ran all test suites.
 > - API is deployed in Docker and health-checked ➝ Unit tests (Jest) ensure API correctness on API server start ➝ E2E Cypress tests validate API and Swagger live :)
 > - HTML reports are generated for each Cypress test run and uploaded as workflow artefacts.
 > - See [.github/workflows/main.yml](.github/workflows/main.yml).
+
+[_⇡ Return to the Table of Contents_](#table-of-contents)
 
 ***
 
@@ -226,6 +261,8 @@ Ran all test suites.
 ├── server.js               # Express app server start logic
 ```
 
+[_⇡ Return to the Table of Contents_](#table-of-contents)
+
 ***
 
 ## Customization
@@ -233,18 +270,22 @@ Ran all test suites.
 - Swap the in-memory array for a persistent database (MongoDB, PostgreSQL, etc.) as needed 
 - Add new models, auth, environment config, and deployment scripts per your scaling needs
 
+[_⇡ Return to the Table of Contents_](#table-of-contents)
+
 ***
 
 ## TODO
 
-1. Create a TOC 
-2. Create Github actions with workflows to deploy the app and test the app in Docker with Cypress
-3. Integrate Cucumber BDD for the cypress end-to-end tests
+1. Integrate Cucumber BDD for the cypress end-to-end tests
+
+[_⇡ Return to the Table of Contents_](#table-of-contents)
 
 ***
 
 ## License
 
 MIT License. Feel free to use, modify, and share!
+
+[_⇡ Return to the Table of Contents_](#table-of-contents)
 
 ***
