@@ -41,8 +41,8 @@ jobs:
       - name: Run unit tests
         run: npm test
 
-#      - name: Start API in background
-#        run: node server.js
+      - name: Start API in background
+        run: node server.js
 
       - name: Wait for API service to be healthy
         run: |
