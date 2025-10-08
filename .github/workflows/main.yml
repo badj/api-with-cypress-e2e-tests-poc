@@ -58,6 +58,10 @@ jobs:
       - name: Install Cypress
         run: npm install --save-dev cypress
 
+      # Install wait-on globally (to wait for the API to be ready)
+      - name: Install wait-on
+        run: npm install -g wait-on
+
 #      - name: Run Cypress tests in Docker
 #        env:
 #          CYPRESS_baseUrl: http://localhost:3333
@@ -73,8 +77,9 @@ jobs:
 #           cypress/included:13.3.2 \
 #           -c "npm install && npx cypress run"
 
-          # Start the API in the background
-      - name: Start API
+
+      # Start the API in the background
+      - name: Start API in  background
         run: |
           node server.js & \
           wait-on http://localhost:3333
