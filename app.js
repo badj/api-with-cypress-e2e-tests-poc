@@ -20,7 +20,7 @@ const swaggerOptions = {
         info: {
             title: 'Item API',
             version: '1.0.0',
-            description: 'A simple CRUD API with Swagger docs',
+            description: 'A Node.JS Express API with Swagger API docs and Jest SuperTest Unit tests',
         },
         servers: [{ url: `http://localhost:${port}` }],
     },
