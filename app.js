@@ -30,6 +30,8 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
+// CRUD and Swagger routes
+
 /**
  * @swagger
  * components:
@@ -189,3 +191,6 @@ app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
     console.log(`Swagger docs available at http://localhost:${port}/api-docs`);
 });
+
+// Export app and helpers (for tests)
+module.exports = { app, items, reset: () => { items = []; id = 1; } };

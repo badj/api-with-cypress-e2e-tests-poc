@@ -75,11 +75,110 @@ node app.js
 
 ***
 
+## Unit Tests
+
+Unit tests are implemented in Jest and supertest inside the __tests__/ directory to verify all API endpoints accurately.
+
+- Tests each /items CRUD endpoint for correctness and error handling
+- Runs in-memory (no DB required)
+
+**Run tests manually:**
+
+```bash
+npm test
+```
+
+- Expected output sample:
+
+```terminaloutput
+(main) % npm test                     
+
+> nodejs-express-api-with-swagger-and-cypress-e2e-tests@1.0.0 test
+> jest
+
+ console.log
+   Server running on http://localhost:3333
+
+     at Server.log (app.js:191:13)
+
+ console.log
+   Swagger docs available at http://localhost:3333/api-docs
+
+     at Server.log (app.js:192:13)
+
+PASS  __tests__/app.test.js
+ API Unit Tests
+   ✓ should create an item (31 ms)
+   ✓ should list items (3 ms)
+   ✓ should get item by id (2 ms)
+   ✓ should update item (2 ms)
+   ✓ should delete item (4 ms)
+   ✓ should return 404 for missing item (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.31 s, estimated 1 s
+Ran all test suites.
+
+```
+
+**Run unit tests automatically on server startup:**
+
+```bash
+RUN_TESTS=true node server.js
+```
+
+- Expected output sample:
+
+```terminaloutput
+(main) % RUN_TESTS=true node server.js
+Server running on http://localhost:3333
+Swagger docs available at http://localhost:3333/api-docs
+Server running on http://localhost:3333
+Swagger docs available at http://localhost:3333/api-docs
+Running unit tests...
+
+> nodejs-express-api-with-swagger-and-cypress-e2e-tests@1.0.0 test
+> jest
+
+  console.log
+    Server running on http://localhost:3333
+
+      at Server.log (app.js:191:13)
+
+  console.log
+    Swagger docs available at http://localhost:3333/api-docs
+
+      at Server.log (app.js:192:13)
+
+PASS __tests__/app.test.js
+  API Unit Tests
+    ✓ should create an item (29 ms)
+    ✓ should list items (3 ms)
+    ✓ should get item by id (2 ms)
+    ✓ should update item (2 ms)
+    ✓ should delete item (2 ms)
+    ✓ should return 404 for missing item (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.265 s, estimated 1 s
+Ran all test suites.
+```
+***
+
+
+***
+
 ## Folder Structure
 
 ```
-├── app.js          # Express app and API logic with Swagger
+├── app.js           # Express app and API logic
 ├── package.json
+└── __tests__/
+    └── app.test.js  # Unit tests for API
 ```
 
 ***
