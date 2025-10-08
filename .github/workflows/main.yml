@@ -12,21 +12,21 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    services:
-      api:
-        image: node:18
-        ports:
-          - 3333:3333
-        env:
-          CI: true
-        options: >-
-          --health-cmd="curl --fail http://localhost:3333/api-docs || exit 1"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=15
-        volumes:
-          - .:/app
-        command: sh -c "cd /app && npm ci && node server.js"
+#    services:
+#      api:
+#        image: node:18
+#        ports:
+#          - 3333:3333
+#        env:
+#          CI: true
+#        options: >-
+#          --health-cmd="curl --fail http://localhost:3333/api-docs || exit 1"
+#          --health-interval=10s
+#          --health-timeout=5s
+#          --health-retries=15
+#        volumes:
+#          - .:/app
+#        command: sh -c "cd /app && npm ci && node server.js"
 
     steps:
       - name: Checkout code
@@ -37,6 +37,9 @@ jobs:
 
       - name: Run unit tests
         run: npm test
+
+#      - name: Start API in background
+#        run: node server.js
 
       - name: Wait for API service to be healthy
         run: |
