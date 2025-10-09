@@ -24,8 +24,9 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
   - [Start the Server](#start-the-server)
 - [API Endpoints](#api-endpoints)
 - [Swagger API Documentation](#swagger-api-documentation)
-- [Unit Tests](#unit-tests)
-- [End-to-End Testing](#end-to-end-testing)
+- [Test Coverage](#test-coverage)
+  - [Unit Tests](#unit-tests)
+  - [End-to-End Testing](#end-to-end-testing)
 - [CI/CD with GitHub Actions](#cicd-with-github-actions)
 - [Folder Structure](#folder-structure)
 - [Customization](#customization)
@@ -111,6 +112,7 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
 [_⇡ Return to the Table of Contents_](#table-of-contents)
 
 ***
+## Test Coverage
 
 ## Unit Tests
 
