@@ -31,7 +31,6 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
 - [Folder Structure](#folder-structure)
 - [Customization](#customization)
 - [TODO](#todo)
-- [License](#license)
 ***
 
 ## Features
@@ -279,14 +278,6 @@ Ran all test suites.
 ## TODO
 
 1. Integrate Cucumber BDD for the cypress end-to-end tests
-
-[_⇡ Return to the Table of Contents_](#table-of-contents)
-
-***
-
-## License
-
-MIT License. Feel free to use, modify, and share!
 
 [_⇡ Return to the Table of Contents_](#table-of-contents)
 
