@@ -128,7 +128,7 @@ Unit tests are implemented in Jest and supertest inside the `tests/` directory t
   
 - Expected output sample:
 
-```json
+```terminaloutput
 (main) % npm test                     
 
 > nodejs-express-api-with-swagger-and-cypress-e2e-tests@1.0.0 test
@@ -169,7 +169,7 @@ Ran all test suites.
 
 - Expected output sample:
 
-```json
+```terminaloutput
 (main) % RUN_TESTS=true node server.js
 Server running on http://localhost:3333
 Swagger docs available at http://localhost:3333/api-docs
@@ -252,7 +252,7 @@ Ran all test suites.
 
 ## Folder Structure
 
-```json
+```terminaloutput
 ├── .github/
     └── workflows/
         └── main.yml        # Wortkflow for GitHub Actions
