@@ -228,7 +228,11 @@ Ran all test suites.
   ```bash
   npx cypress run
   ```
-  
+- OR Run Unit tests, start the API Server, and run Cypress E2E tests in one command
+  ```bash
+  npm test && node server.js && npx cypress run
+  ```
+
 [_⇡ Return to the Table of Contents_](#table-of-contents)
 
 ***
