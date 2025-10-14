@@ -2,11 +2,11 @@
 
 ## Overview
 
-This project is a boilerplate [Node.js](https://nodejs.org/en) API server built with [Express JS framework](https://expressjs.com/) supporting CRUD operations *(Create, Read, Update, Delete)* for a simple `Item` entity. It features:
+This project is a boilerplate [Node.js](https://nodejs.org/en) API server built with [Express.JS framework](https://expressjs.com/) supporting CRUD operations *(Create, Read, Update, Delete)* for a simple `Item` entity. It features:
 
-- [**Swagger UI documentation**](https://swagger.io/) for easy API reference and exploration
-- [**Jest**](https://jestjs.io/) **and** [**supertest**](https://www.npmjs.com/package/supertest) **unit tests** to verify all API endpoints accurately
-- **End-to-End tests** using [Cypress](https://www.cypress.io/) that verify both the availability of Swagger docs and the functionality of every CRUD endpoint
+- [**Swagger UI documentation**](https://swagger.io/) for easy API reference and exploration.
+- [**Jest**](https://jestjs.io/) **and** [**supertest**](https://www.npmjs.com/package/supertest) **unit tests** to verify all API endpoints accurately.
+- **End-to-End tests** using [Cypress](https://www.cypress.io/) that verify both the availability of Swagger docs and the functionality of every CRUD endpoint.
 
 Ideal for learning, prototyping, or as a base for new RESTful services.
 
@@ -89,12 +89,12 @@ Ideal for learning, prototyping, or as a base for new RESTful services.
 
 ## API Endpoints
 
-| Method | Endpoint | Description |
-| :-- | :-- | :-- |
-| GET | `/items` | List all items |
-| GET | `/items/:id` | Get item by ID |
-| POST | `/items` | Create a new item |
-| PUT | `/items/:id` | Update an item by ID |
+| Method | Endpoint     | Description          |
+|:-------|:-------------|:---------------------|
+| GET    | `/items`     | List all items       |
+| GET    | `/items/:id` | Get item by ID       |
+| POST   | `/items`     | Create a new item    |
+| PUT    | `/items/:id` | Update an item by ID |
 | DELETE | `/items/:id` | Delete an item by ID |
 
 - See complete request/response schemas at [/api-docs](http://localhost:3333/api-docs).
@@ -213,7 +213,7 @@ Ran all test suites.
 ## End-to-End Testing
 
 > **Cypress End-to-End Tests**
-> - The tests visits the [Swagger API docs](http://localhost:3333/api-docs) to verify the availability and correctness
+> - The tests visit the [Swagger API docs](http://localhost:3333/api-docs) to verify the availability and correctness
 > - The tests execute and validate all CRUD operations against the API
 
 - Install Cypress:
@@ -242,7 +242,7 @@ Ran all test suites.
 [![Item API Deploy and E2E Cypress Tests](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml/badge.svg)](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml)
 
 > - CI is scheduled to run daily and will run on every push/PR
-> - API is deployed in Docker and health-checked ➝ Unit tests (Jest) ensure API correctness on API server start ➝ E2E Cypress tests validate API and Swagger live :)
+> - API is deployed in Docker and health-checked ➝ Unit tests (Jest) ensure API correctness on the API server startup ➝ E2E Cypress tests validate API and Swagger live :)
 > - HTML reports are generated for each Cypress test run and uploaded as workflow artefacts.
 > - See [.github/workflows/main.yml](.github/workflows/main.yml).
 
@@ -255,7 +255,7 @@ Ran all test suites.
 ```terminaloutput
 ├── .github/
     └── workflows/
-        └── main.yml        # Wortkflow for GitHub Actions
+        └── main.yml        # Workflow for GitHub Actions
 ├── tests/
     └── app.test.js         # Unit tests for API
 ├── app.js                  # Express app and API logic
