@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a boilerplate [Node.js](https://nodejs.org/en) API server built with [Express.JS framework](https://expressjs.com/) supporting CRUD operations *(Create, Read, Update, Delete)* for a simple `Item` entity. It features:
+This project is a boilerplate [Node.js](https://nodejs.org/en) API server built with [Express.js framework](https://expressjs.com/) supporting CRUD operations *(Create, Read, Update, Delete)* for a simple `Item` entity. It features:
 
 - [**Swagger UI documentation**](https://swagger.io/) for easy API reference and exploration.
 - [**Jest**](https://jestjs.io/) **and** [**supertest**](https://www.npmjs.com/package/supertest) **unit tests** to verify all API endpoints accurately.
@@ -281,7 +281,7 @@ Ran all test suites.
 
 ## TODO
 
-1. Integrate Cucumber BDD for the cypress end-to-end tests
+1. Integrate Cucumber BDD for the Cypress end-to-end tests
 
 [_⇡ Return to the Table of Contents_](#table-of-contents)
 
