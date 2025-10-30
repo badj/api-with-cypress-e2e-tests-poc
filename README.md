@@ -2,13 +2,11 @@
 
 ## Overview
 
-This project is a boilerplate [Node.js](https://nodejs.org/en) API server built with the [Express.js framework](https://expressjs.com/) supporting CRUD operations *(Create, Read, Update, Delete)* for a simple `Item` entity. It features:
+This project is a boilerplate [Node.js](https://nodejs.org/en) RESTful API server built with the [Express.js framework](https://expressjs.com/) supporting CRUD operations *(Create, Read, Update, Delete)* for a simple `Item` entity, featuring/showcasing:
 
 - [**Swagger UI documentation**](https://swagger.io/) for easy API reference and exploration.
 - [**Jest**](https://jestjs.io/) **and** [**supertest**](https://www.npmjs.com/package/supertest) **unit tests** to verify all API endpoints accurately.
 - **End-to-End tests** using [Cypress](https://www.cypress.io/) that verify both the availability of Swagger docs and the functionality of every CRUD endpoint.
-
-Ideal for learning, prototyping, or as a base for new RESTful services.
 
 [![Item API Deploy and E2E Cypress Tests](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml/badge.svg)](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml)
 
