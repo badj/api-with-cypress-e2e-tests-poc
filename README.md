@@ -279,7 +279,8 @@ Ran all test suites.
 
 ## TODO
 
-1. Integrate Cucumber BDD for the Cypress end-to-end tests
+1. Integrate API mocking for CRUD using RestAssured or WireMock and add to Github Actions workflow to showcase it as part of this repo poc/showcase.
+2. Integrate Cucumber BDD for the Cypress end-to-end tests
 
 [_⇡ Return to the Table of Contents_](#table-of-contents)
 
