@@ -78,7 +78,7 @@ This project is a boilerplate [Node.js](https://nodejs.org/en) RESTful API serve
      node app.js
   ```
 
-- API accessible at: [http://localhost:3333](http://localhost:3333)
+- API is accessible at: [http://localhost:3333](http://localhost:3333)
 - Swagger API docs accessible at: [http://localhost:3333/api-docs](http://localhost:3333/api-docs)
 
 [_⇡ Return to the Table of Contents_](#table-of-contents)
