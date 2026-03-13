@@ -15,15 +15,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Update to latest version
+        uses: actions/checkout@v6.0.2 # Update to latest version
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: '24'
 
       - name: Cache Cypress binary
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.3
         with:
           path: ~/.cache/Cypress
           key: cypress-${{ runner.os }}-13.15.0
@@ -58,7 +58,7 @@ jobs:
 
       - name: Upload Cypress test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: cypress-results
           path: |
