@@ -187,10 +187,13 @@ app.delete('/items/:id', (req, res) => {
     res.status(204).send();
 });
 
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-    console.log(`Swagger docs available at http://localhost:${port}/api-docs`);
-});
+// Only start the server when run directly (server.js and tests require this module)
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`Server running on http://localhost:${port}`);
+        console.log(`Swagger docs available at http://localhost:${port}/api-docs`);
+    });
+}
 
 // Export app and helpers (for tests)
 module.exports = { app, items, reset: () => { items = []; id = 1; } };

@@ -15,19 +15,16 @@
   "dependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.6",
     "body-parser": "^2.2.0",
-    "cypress-mochawesome-reporter": "^4.0.2",
     "cypress-on-fix": "^1.1.0",
     "express": "^5.1.0",
-    "npx": "^10.2.2",
-    "run": "^1.5.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "cypress": "^13.17.0",
+    "cypress": "^15.19.0",
     "cypress-mochawesome-reporter": "^4.0.2",
-    "jest": "^30.2.0",
-    "mochawesome-merge": "^4.3.0",
+    "jest": "^30.4.2",
+    "mochawesome-merge": "^5.1.1",
     "supertest": "^7.1.4"
   }
 }
