@@ -6,7 +6,7 @@ This project is a boilerplate [Node.js](https://nodejs.org/en) RESTful API serve
 
 - [**Swagger UI documentation**](https://swagger.io/) for easy API reference and exploration.
 - [**Jest**](https://jestjs.io/) **and** [**supertest**](https://www.npmjs.com/package/supertest) **unit tests** to verify all API endpoints accurately.
-- **End-to-End tests** using [Cypress](https://www.cypress.io/) that verify both the availability of Swagger docs and the functionality of every CRUD endpoint.
+- **End-to-End tests** using the [Cypress framework](https://www.cypress.io/) that verify both the availability of Swagger docs and the functionality of every CRUD endpoint.
 
 [![Item API Deploy and E2E Cypress Tests](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml/badge.svg)](https://github.com/badj/api-with-cypress-e2e-tests-poc/actions/workflows/main.yml)
 
