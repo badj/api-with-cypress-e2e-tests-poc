@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "cypress": "^15.19.0",
-    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-mochawesome-reporter": "^5.0.0",
     "jest": "^30.4.2",
     "mochawesome-merge": "^5.1.1",
     "supertest": "^7.1.4"
