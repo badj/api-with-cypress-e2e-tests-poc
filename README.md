@@ -279,7 +279,7 @@ Ran all test suites.
 
 ## TODO
 
-1. Integrate API mocking for CRUD using RestAssured or WireMock and add to Github Actions workflow to showcase it as part of this repo poc/showcase.
+1. Integrate API mocking for CRUD using RestAssured or WireMock and add to Github Actions workflow to showcase it as part of this repo / showcase.
 2. Integrate Jmeter performance testing for Crud and add to Github Actions workflow to showcase it as part of this repo poc/showcase.
 3. Integrate Cucumber BDD for the Cypress end-to-end tests
 
